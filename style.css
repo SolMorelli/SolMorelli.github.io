@@ -58,6 +58,9 @@ main .projects-main {
     height: 50vh;
     padding: 0 2rem;
 }
+main .projects-main::-webkit-scrollbar {
+    width: 0;
+}
 main .projects-main .card-main {
     height: 40vh;
     min-width: 10rem;
@@ -80,9 +83,17 @@ main .links-main {
     display: flex;
     justify-content: space-between;
     font-size: 2.5rem;
+}
+main .links-main i {
     opacity: .75;
     transition: opacity ease-in-out 200ms;
 }
-main .links-main:hover {
+main .links-main i:hover {
     opacity: 1;
 }
+
+@media only screen and (min-width: 768px) {
+    main .links-main {
+        justify-content: space-around;
+    }
+  }
