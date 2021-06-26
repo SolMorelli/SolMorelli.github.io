@@ -1,14 +1,12 @@
 /*-- --- VARIABLES --- --*/
 :root {
-    --bg-color: #222831;
+    --primary-color: #222831;
     --secondary-color: #393E46;
     --font-color: #fff;
     --accent-color: #FFD369;
-    --bg-gradient: 0deg, rgba(233,228,240,1) 0%, rgba(211,204,227,1) 100%;
 
     --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-
 
 /*-- --- GLOBAL --- --*/
 html {
@@ -18,7 +16,7 @@ html {
 body {
     height: 100vh;
     margin: 0;
-    background: var(--bg-color);
+    background: var(--primary-color);
     font-family: Helvetica, sans-serif;
     font-weight: 400;
     font-size: 1rem;
@@ -30,10 +28,10 @@ a {
     text-decoration: none;
 }
 h1 {
-    font-weight: 400;
-    color: inherit;
+    font-weight: inherit;
     font-size: 4rem;
     margin: 0;
+    margin-bottom: 1rem;
 }
 h3 {
     text-align: center;
@@ -45,7 +43,7 @@ strong {
 /*-- --- SECTION MAIN --- --*/
 
 main {
-    height: fit-content;
+    
     display: flex;
     flex-direction: column;
     margin: 2rem 0;
@@ -57,6 +55,7 @@ main .text-main {
 main .text-main p {
     line-height: 26px;
     text-align: justify;
+    margin: 0;
 }
 main .text-main p a {
     color: var(--accent-color);
@@ -87,7 +86,11 @@ main .projects-main .card-main {
 
     text-align: center;
     padding: 2rem;
+    padding-bottom: 0;
     box-sizing: border-box;
+}
+main .projects-main .card-main:last-child {
+    margin-right: 0;
 }
 
 main .links-main {
